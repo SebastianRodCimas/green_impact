@@ -18,7 +18,7 @@ class _ProfilState extends State<Profil> {
 
   Future<void> _pickImage() async {
     final picker = ImagePicker();
-    final pickedFile = await picker.getImage(source: ImageSource.gallery);
+    final pickedFile = await picker.pickImage(source: ImageSource.gallery);
 
     if (pickedFile != null) {
       setState(() {
@@ -30,9 +30,8 @@ class _ProfilState extends State<Profil> {
   @override
   void initState() {
     super.initState();
-    // Définir l'image par défaut ici (aucune image)
-    _avatarImagePath =
-        'assets/icon/+.png'; // Ajoutez le chemin vers votre image par défaut
+
+    _avatarImagePath = 'assets/icon/+.png';
   }
 
   @override
@@ -41,12 +40,12 @@ class _ProfilState extends State<Profil> {
       appBar: AppBar(
         title: Text(
           'GreenImpact',
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(color: Colors.white, fontSize: 25),
         ),
         centerTitle: true,
-        backgroundColor: Colors.green.shade600,
+        backgroundColor: Colors.green.shade300,
       ),
-      backgroundColor: Colors.green.shade600,
+      backgroundColor: Colors.green.shade300,
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -63,7 +62,7 @@ class _ProfilState extends State<Profil> {
                           width: 50,
                           height: 50,
                           decoration: BoxDecoration(
-                            color: Colors.green.shade600,
+                            color: Color(0xFF3C9442),
                             shape: BoxShape.circle,
                             image: DecorationImage(
                               image: AssetImage(_avatarImagePath),
@@ -77,7 +76,7 @@ class _ProfilState extends State<Profil> {
                         backgroundColor: Colors.white,
                         child: Icon(
                           Icons.add,
-                          color: Colors.green.shade600,
+                          color: Colors.green.shade800,
                         ),
                       ),
                 SizedBox(width: 20), // Espacement entre l'avatar et le nom
@@ -93,6 +92,7 @@ class _ProfilState extends State<Profil> {
             ),
             SizedBox(height: 20),
             Container(
+              height: 170,
               padding: EdgeInsets.all(16.0),
               decoration: BoxDecoration(
                 color: Colors.white,
@@ -111,13 +111,13 @@ class _ProfilState extends State<Profil> {
                 children: [
                   Expanded(
                     child: Text(
-                      '       Tache 1',
-                      style: TextStyle(fontSize: 18.0),
+                      ' Débranchez vos prises',
+                      style: TextStyle(fontSize: 20.0),
                     ),
                   ),
                   Container(
                     width: 50.0,
-                    height: 100.0,
+                    height: 50.0,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       image: DecorationImage(
@@ -131,6 +131,7 @@ class _ProfilState extends State<Profil> {
             ),
             SizedBox(height: 20),
             Container(
+              height: 170,
               padding: EdgeInsets.all(16.0),
               decoration: BoxDecoration(
                 color: Colors.white,
@@ -149,13 +150,13 @@ class _ProfilState extends State<Profil> {
                 children: [
                   Expanded(
                     child: Text(
-                      '       Tache 1',
-                      style: TextStyle(fontSize: 18.0),
+                      ' Arrêtez le chauffage',
+                      style: TextStyle(fontSize: 20.0),
                     ),
                   ),
                   Container(
                     width: 50.0,
-                    height: 100.0,
+                    height: 50.0,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       image: DecorationImage(
@@ -171,6 +172,7 @@ class _ProfilState extends State<Profil> {
               height: 20,
             ),
             Container(
+              height: 170,
               padding: EdgeInsets.all(16.0),
               decoration: BoxDecoration(
                 color: Colors.white,
@@ -189,13 +191,54 @@ class _ProfilState extends State<Profil> {
                 children: [
                   Expanded(
                     child: Text(
-                      '       Tache 1',
-                      style: TextStyle(fontSize: 18.0),
+                      ' Triez vos déchets',
+                      style: TextStyle(fontSize: 20.0),
                     ),
                   ),
                   Container(
                     width: 50.0,
-                    height: 100.0,
+                    height: 50.0,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      image: DecorationImage(
+                        image: AssetImage('assets/icon/icon.png'),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Container(
+              height: 170,
+              padding: EdgeInsets.all(16.0),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(12.0),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.5),
+                    spreadRadius: 2,
+                    blurRadius: 5,
+                    offset: Offset(0, 3),
+                  ),
+                ],
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Expanded(
+                    child: Text(
+                      ' Fermez le robinet',
+                      style: TextStyle(fontSize: 20.0),
+                    ),
+                  ),
+                  Container(
+                    width: 50.0,
+                    height: 50.0,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       image: DecorationImage(
@@ -219,7 +262,7 @@ class _ProfilState extends State<Profil> {
         child: BottomNavigationBar(
           currentIndex: _currentIndex,
           onTap: _onTabTapped,
-          backgroundColor: Colors.green.shade600,
+          backgroundColor: Colors.green.shade800,
           unselectedItemColor: Colors.white,
           items: [
             BottomNavigationBarItem(
