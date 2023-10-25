@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:green_impact/src/questionnaire.dart';
 import 'package:image_picker/image_picker.dart';
 
 import 'bilan.dart';
@@ -315,18 +316,32 @@ class _ProfilState extends State<Profil> {
             unselectedItemColor: Colors.white,
             items: [
               BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.perm_identity_rounded,
-                  size: 35,
-                  color: Colors.white,
+                icon: GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => Profil(),
+                    ));
+                  },
+                  child: Icon(
+                    Icons.data_exploration_rounded,
+                    size: 35,
+                    color: Colors.white,
+                  ),
                 ),
                 label: 'Profil',
               ),
               BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.question_mark_sharp,
-                  color: Colors.white,
-                  size: 35,
+                icon: GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => Questionnaire(),
+                    ));
+                  },
+                  child: Icon(
+                    Icons.data_exploration_rounded,
+                    size: 35,
+                    color: Colors.white,
+                  ),
                 ),
                 label: 'Questionnaire',
               ),
