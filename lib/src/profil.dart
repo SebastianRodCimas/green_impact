@@ -112,17 +112,18 @@ class _ProfilState extends State<Profil> {
                 children: [
                   Expanded(
                     child: Text(
-                      ' Débranchez vos prises',
-                      style: TextStyle(fontSize: 20.0),
+                      'Débranchez vos prises',
+                      style: TextStyle(fontSize: 18.0),
+                      textAlign: TextAlign.center,
                     ),
                   ),
                   Container(
-                    width: 50.0,
-                    height: 50.0,
+                    width: 200.0,
+                    height: 200.0,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       image: DecorationImage(
-                        image: AssetImage('assets/icon/icon.png'),
+                        image: AssetImage('assets/image/electricite.png'),
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -151,17 +152,18 @@ class _ProfilState extends State<Profil> {
                 children: [
                   Expanded(
                     child: Text(
-                      ' Arrêtez la clime',
-                      style: TextStyle(fontSize: 20.0),
+                      'Arrêter la clime',
+                      style: TextStyle(fontSize: 18.0),
+                      textAlign: TextAlign.center,
                     ),
                   ),
                   Container(
-                    width: 50.0,
-                    height: 50.0,
+                    width: 200.0,
+                    height: 200.0,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       image: DecorationImage(
-                        image: AssetImage('assets/icon/icon.png'),
+                        image: AssetImage('assets/image/clim.png'),
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -192,17 +194,18 @@ class _ProfilState extends State<Profil> {
                 children: [
                   Expanded(
                     child: Text(
-                      ' Triez vos déchets',
-                      style: TextStyle(fontSize: 20.0),
+                      'Triez vos déchets',
+                      style: TextStyle(fontSize: 18.0),
+                      textAlign: TextAlign.center,
                     ),
                   ),
                   Container(
-                    width: 50.0,
-                    height: 50.0,
+                    width: 200.0,
+                    height: 200.0,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       image: DecorationImage(
-                        image: AssetImage('assets/icon/icon.png'),
+                        image: AssetImage('assets/image/dechet.png'),
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -233,17 +236,18 @@ class _ProfilState extends State<Profil> {
                 children: [
                   Expanded(
                     child: Text(
-                      ' Fermez le robinet',
-                      style: TextStyle(fontSize: 20.0),
+                      'Fermez le robinet',
+                      style: TextStyle(fontSize: 18.0),
+                      textAlign: TextAlign.center,
                     ),
                   ),
                   Container(
-                    width: 50.0,
-                    height: 50.0,
+                    width: 200.0,
+                    height: 200.0,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       image: DecorationImage(
-                        image: AssetImage('assets/icon/icon.png'),
+                        image: AssetImage('assets/image/robinet.png'),
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -251,6 +255,48 @@ class _ProfilState extends State<Profil> {
                 ],
               ),
             ),
+            SizedBox(
+              height: 20,
+            ),
+            Container(
+              height: 170,
+              padding: EdgeInsets.all(16.0),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(12.0),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.5),
+                    spreadRadius: 2,
+                    blurRadius: 5,
+                    offset: Offset(0, 3),
+                  ),
+                ],
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Expanded(
+                    child: Text(
+                      'Limitez les transports',
+                      style: TextStyle(fontSize: 18.0),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  Container(
+                    width: 200.0,
+                    height: 200.0,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      image: DecorationImage(
+                        image: AssetImage('assets/image/transport.png'),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            )
           ],
         ),
       ),

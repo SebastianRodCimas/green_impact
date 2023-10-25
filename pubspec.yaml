@@ -45,8 +45,9 @@ flutter_lints: ^2.0.0
 flutter:
   uses-material-design: true
   assets:
+    - assets/image/
     - assets/icon/
-    - assets/splash/icon.png
+    - assets/splash/
 
   # Vous pouvez ajouter vos polices personnalisées ici, par exemple :
   # fonts:

@@ -35,8 +35,8 @@ class _MyPageState extends State<MyPage> {
                     children: [
                       Image.asset(
                         'assets/icon/icon.png', // Remplacez 'assets/icon/icon.png' par le chemin de votre image
-                        width: 150,
-                        height: 150,
+                        width: 200,
+                        height: 200,
                       ),
                       SizedBox(height: 20),
                       Text(
