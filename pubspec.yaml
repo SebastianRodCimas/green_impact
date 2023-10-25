@@ -36,6 +36,7 @@ dev_dependencies:
   flutter_local_notifications: ^5.0.0
   timezone: ^0.7.0
   fl_chart: ^0.64.0
+  lottie: ^1.1.0
 
 flutter_native_splash:
   color: "#19541C"
@@ -49,6 +50,7 @@ flutter:
     - assets/image/
     - assets/icon/
     - assets/splash/
+    - assets/loading.json
 
   # Vous pouvez ajouter vos polices personnalisées ici, par exemple :
   # fonts:

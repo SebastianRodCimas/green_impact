@@ -154,7 +154,7 @@ class _ProfilState extends State<Profil> {
                 children: [
                   Expanded(
                     child: Text(
-                      'Arrêter la clime',
+                      'Arrêter la clim',
                       style: TextStyle(fontSize: 18.0),
                       textAlign: TextAlign.center,
                     ),

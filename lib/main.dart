@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:green_impact/src/notif.dart';
-import 'package:green_impact/src/profil.dart';
 import 'package:timezone/data/latest.dart' as tz;
+
+import 'auth/login.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
         useMaterial3: true,
       ),
-      home: Profil(),
+      home: Login(),
     );
   }
 }
