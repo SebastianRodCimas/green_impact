@@ -44,6 +44,7 @@ class _ProfilState extends State<Profil> {
         ),
         centerTitle: true,
         backgroundColor: Colors.green.shade300,
+        automaticallyImplyLeading: false,
       ),
       backgroundColor: Colors.green.shade300,
       body: SingleChildScrollView(
@@ -150,7 +151,7 @@ class _ProfilState extends State<Profil> {
                 children: [
                   Expanded(
                     child: Text(
-                      ' Arrêtez le chauffage',
+                      ' Arrêtez la clime',
                       style: TextStyle(fontSize: 20.0),
                     ),
                   ),
