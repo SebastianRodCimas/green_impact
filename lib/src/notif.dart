@@ -34,13 +34,13 @@ class _MyPageState extends State<MyPage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Image.asset(
-                        'assets/icon/icon.png', // Remplacez 'assets/icon/icon.png' par le chemin de votre image
-                        width: 200,
-                        height: 200,
+                        'assets/image/notif-robinet.png', // Remplacez 'assets/icon/icon.png' par le chemin de votre image
+                        width: 300,
+                        height: 300,
                       ),
                       SizedBox(height: 20),
                       Text(
-                        'Titre de la Page 1',
+                        'Fermez le robinet',
                         style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.bold,
@@ -48,7 +48,7 @@ class _MyPageState extends State<MyPage> {
                       ),
                       SizedBox(height: 20),
                       Text(
-                        'Texte de la Page 2',
+                        "Réduction de la consommation d'eau",
                         style: TextStyle(
                           fontSize: 16,
                         ),
@@ -64,13 +64,13 @@ class _MyPageState extends State<MyPage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Image.asset(
-                        'assets/icon/icon.png',
-                        width: 150,
-                        height: 150,
+                        'assets/image/notif-prise.png',
+                        width: 250,
+                        height: 250,
                       ),
-                      SizedBox(height: 20),
+                      SizedBox(height: 40),
                       Text(
-                        'Titre de la Page 2',
+                        'Retirez les prises unitilisées',
                         style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.bold,
@@ -78,7 +78,7 @@ class _MyPageState extends State<MyPage> {
                       ),
                       SizedBox(height: 20),
                       Text(
-                        'Texte de la Page 2',
+                        'Réduction de votre consommation électriques',
                         style: TextStyle(
                           fontSize: 16,
                         ),
@@ -92,13 +92,13 @@ class _MyPageState extends State<MyPage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Image.asset(
-                        'assets/icon/icon.png', // Remplacez 'assets/icon/icon.png' par le chemin de votre image
-                        width: 150,
-                        height: 150,
+                        'assets/image/notif-recyclage.png', // Remplacez 'assets/icon/icon.png' par le chemin de votre image
+                        width: 300,
+                        height: 300,
                       ),
                       SizedBox(height: 20),
                       Text(
-                        'Titre de la Page 3',
+                        'Recyclez vos déchets',
                         style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.bold,
@@ -106,7 +106,36 @@ class _MyPageState extends State<MyPage> {
                       ),
                       SizedBox(height: 20),
                       Text(
-                        'Texte de la Page 2',
+                        'Réduction des déchets dans les décharges',
+                        style: TextStyle(
+                          fontSize: 16,
+                        ),
+                      ),
+                      SizedBox(height: 20),
+                    ],
+                  ),
+                ),
+
+                Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        'assets/image/notif-tri.jpg', // Remplacez 'assets/icon/icon.png' par le chemin de votre image
+                        width: 300,
+                        height: 300,
+                      ),
+                      SizedBox(height: 20),
+                      Text(
+                        'Triez vos déchets',
+                        style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      SizedBox(height: 20),
+                      Text(
+                        "Recyclage facilité",
                         style: TextStyle(
                           fontSize: 16,
                         ),
@@ -162,7 +191,7 @@ class _MyPageState extends State<MyPage> {
                     padding: const EdgeInsets.only(left: 16.0, bottom: 50),
                     child: ElevatedButton(
                       onPressed: () {
-                        if (_pageController.page != 2) {
+                        if (_pageController.page != 4) {
                           _pageController.nextPage(
                             duration: Duration(milliseconds: 300),
                             curve: Curves.easeInOut,

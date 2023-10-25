@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
+import 'bilan.dart';
+
 class Profil extends StatefulWidget {
   @override
   _ProfilState createState() => _ProfilState();
@@ -307,37 +309,43 @@ class _ProfilState extends State<Profil> {
           ),
         ),
         child: BottomNavigationBar(
-          currentIndex: _currentIndex,
-          onTap: _onTabTapped,
-          backgroundColor: Colors.green.shade800,
-          unselectedItemColor: Colors.white,
-          items: [
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.perm_identity_rounded,
-                size: 35,
-                color: Colors.white,
+            currentIndex: _currentIndex,
+            onTap: _onTabTapped,
+            backgroundColor: Colors.green.shade800,
+            unselectedItemColor: Colors.white,
+            items: [
+              BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.perm_identity_rounded,
+                  size: 35,
+                  color: Colors.white,
+                ),
+                label: 'Profil',
               ),
-              label: 'Profil',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.question_mark_sharp,
-                color: Colors.white,
-                size: 35,
+              BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.question_mark_sharp,
+                  color: Colors.white,
+                  size: 35,
+                ),
+                label: 'Questionnaire',
               ),
-              label: 'Questionnaire',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.data_exploration_rounded,
-                size: 35,
-                color: Colors.white,
+              BottomNavigationBarItem(
+                icon: GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => Bilan(),
+                    ));
+                  },
+                  child: Icon(
+                    Icons.data_exploration_rounded,
+                    size: 35,
+                    color: Colors.white,
+                  ),
+                ),
+                label: 'Bilan',
               ),
-              label: 'Bilan',
-            ),
-          ],
-        ),
+            ]),
       ),
     );
   }
