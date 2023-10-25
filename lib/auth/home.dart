@@ -47,29 +47,4 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
-
-  _searchBar() {
-    return Padding(
-      padding: EdgeInsets.all(12.0),
-      child: TextField(
-        autofocus: false,
-        onChanged: (searchText) {
-          searchText = searchText.toLowerCase();
-          setState(() {
-            // _productsDisplay = _products.where((u) {
-            //   var fName = u.nomProduit!.toLowerCase();
-            //   return fName.contains(searchText) ;
-            // }
-            // ).toList();
-          });
-        },
-        // controller: _textController,
-        decoration: InputDecoration(
-          border: OutlineInputBorder(),
-          prefixIcon: Icon(Icons.search),
-          hintText: 'Search Products',
-        ),
-      ),
-    );
-  }
 }
