@@ -1,0 +1,576 @@
+[
+    {
+        "id": 1,
+        "title": "Quelle distance parcourez-vous à l année en voiture ?",
+        "categoryId": 1,
+        "category": {
+            "id": 1,
+            "name": "Transport"
+        },
+        "answers": [
+            {
+                "id": 1,
+                "title": "moins de 20 000",
+                "score": 1.0,
+                "questionId": 1
+            },
+            {
+                "id": 2,
+                "title": "20 000 - 30 000",
+                "score": 0.5,
+                "questionId": 1
+            },
+            {
+                "id": 3,
+                "title": "plus de 30 000",
+                "score": 0.0,
+                "questionId": 1
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Quel type de voiture utilisez-vous ?",
+        "categoryId": 1,
+        "category": {
+            "id": 1,
+            "name": "Transport"
+        },
+        "answers": [
+            {
+                "id": 4,
+                "title": "electrique",
+                "score": 1.0,
+                "questionId": 2
+            },
+            {
+                "id": 5,
+                "title": "essence",
+                "score": 0.0,
+                "questionId": 2
+            },
+            {
+                "id": 6,
+                "title": "hybride",
+                "score": 0.5,
+                "questionId": 2
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Votre véhicule a t-il moins de 10 ans ?",
+        "categoryId": 1,
+        "category": {
+            "id": 1,
+            "name": "Transport"
+        },
+        "answers": [
+            {
+                "id": 7,
+                "title": "oui",
+                "score": 1.0,
+                "questionId": 3
+            },
+            {
+                "id": 8,
+                "title": "non",
+                "score": 0.0,
+                "questionId": 3
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Quel type de carburant votre voiture consomme-t-elle ?",
+        "categoryId": 1,
+        "category": {
+            "id": 1,
+            "name": "Transport"
+        },
+        "answers": [
+            {
+                "id": 9,
+                "title": "gazole",
+                "score": 0.0,
+                "questionId": 4
+            },
+            {
+                "id": 10,
+                "title": "electricité",
+                "score": 1.0,
+                "questionId": 4
+            },
+            {
+                "id": 11,
+                "title": "biocarburant",
+                "score": 0.5,
+                "questionId": 4
+            },
+            {
+                "id": 12,
+                "title": "sp95",
+                "score": 0.0,
+                "questionId": 4
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Avez-vous pris l avion au moins une fois ces 3 dernières années ?",
+        "categoryId": 1,
+        "category": {
+            "id": 1,
+            "name": "Transport"
+        },
+        "answers": [
+            {
+                "id": 13,
+                "title": "jamais",
+                "score": 1.0,
+                "questionId": 5
+            },
+            {
+                "id": 14,
+                "title": "oui",
+                "score": 0.5,
+                "questionId": 5
+            },
+            {
+                "id": 15,
+                "title": "non",
+                "score": 0.0,
+                "questionId": 5
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Combien d heures passez-vous dans un bus par semaine ?",
+        "categoryId": 1,
+        "category": {
+            "id": 1,
+            "name": "Transport"
+        },
+        "answers": [
+            {
+                "id": 16,
+                "title": "moins de 7h",
+                "score": 0.0,
+                "questionId": 6
+            },
+            {
+                "id": 17,
+                "title": "7h - 10h",
+                "score": 0.5,
+                "questionId": 6
+            },
+            {
+                "id": 18,
+                "title": "plus de 10h",
+                "score": 1.0,
+                "questionId": 6
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "title": "Combien de kilomètres parcourez-vous en train par an ?",
+        "categoryId": 1,
+        "category": {
+            "id": 1,
+            "name": "Transport"
+        },
+        "answers": [
+            {
+                "id": 19,
+                "title": "moins de 300",
+                "score": 0.0,
+                "questionId": 7
+            },
+            {
+                "id": 20,
+                "title": "300 - 500",
+                "score": 0.5,
+                "questionId": 7
+            },
+            {
+                "id": 21,
+                "title": "plus de 500",
+                "score": 1.0,
+                "questionId": 7
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "title": "Quels sont vos modes de déplacements \"efficaces\" ?",
+        "categoryId": 1,
+        "category": {
+            "id": 1,
+            "name": "Transport"
+        },
+        "answers": [
+            {
+                "id": 22,
+                "title": "vélo",
+                "score": 1.0,
+                "questionId": 8
+            },
+            {
+                "id": 23,
+                "title": "marche à pieds",
+                "score": 1.0,
+                "questionId": 8
+            },
+            {
+                "id": 24,
+                "title": "trotinette et vélo electrique",
+                "score": 1.0,
+                "questionId": 8
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "title": "Quel petit déjeuner vous correspond le plus ?",
+        "categoryId": 3,
+        "category": {
+            "id": 3,
+            "name": "Alimentation"
+        },
+        "answers": [
+            {
+                "id": 25,
+                "title": "viennoiserie",
+                "score": 0.0,
+                "questionId": 9
+            },
+            {
+                "id": 26,
+                "title": "fruits",
+                "score": 1.0,
+                "questionId": 9
+            },
+            {
+                "id": 27,
+                "title": "lait et céréales",
+                "score": 0.5,
+                "questionId": 9
+            },
+            {
+                "id": 28,
+                "title": "pas de petit dej",
+                "score": 0.5,
+                "questionId": 9
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "title": "Consommez-vous des produits locaux ?",
+        "categoryId": 3,
+        "category": {
+            "id": 3,
+            "name": "Alimentation"
+        },
+        "answers": [
+            {
+                "id": 29,
+                "title": "oui",
+                "score": 1.0,
+                "questionId": 10
+            },
+            {
+                "id": 30,
+                "title": "non",
+                "score": 0.0,
+                "questionId": 10
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "title": "Consommez-vous des produits de saison ? ",
+        "categoryId": 3,
+        "category": {
+            "id": 3,
+            "name": "Alimentation"
+        },
+        "answers": [
+            {
+                "id": 31,
+                "title": "oui",
+                "score": 1.0,
+                "questionId": 11
+            },
+            {
+                "id": 32,
+                "title": "non",
+                "score": 0.0,
+                "questionId": 11
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "title": "Comment estimeriez-vous la quantité de déchets que vous jetez ?",
+        "categoryId": 3,
+        "category": {
+            "id": 3,
+            "name": "Alimentation"
+        },
+        "answers": [
+            {
+                "id": 33,
+                "title": "je jette sans faire attention",
+                "score": 0.0,
+                "questionId": 12
+            },
+            {
+                "id": 34,
+                "title": "je limite mes déchets",
+                "score": 0.5,
+                "questionId": 12
+            },
+            {
+                "id": 35,
+                "title": "je suis zero dechet",
+                "score": 1.0,
+                "questionId": 12
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "title": "Quels éco-gestes mettez-vous en place pour réduire vos déchets ?",
+        "categoryId": 3,
+        "category": {
+            "id": 3,
+            "name": "Alimentation"
+        },
+        "answers": [
+            {
+                "id": 36,
+                "title": "je composte",
+                "score": 1.0,
+                "questionId": 13
+            },
+            {
+                "id": 37,
+                "title": "je ne gaspille jamais d'aliments",
+                "score": 1.0,
+                "questionId": 13
+            },
+            {
+                "id": 38,
+                "title": "j'ai un autocollant \"stop pub\"",
+                "score": 1.0,
+                "questionId": 13
+            },
+            {
+                "id": 39,
+                "title": "j'achète en vrac",
+                "score": 1.0,
+                "questionId": 13
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "title": "Buvez-vous votre eau en bouteille ? ",
+        "categoryId": 3,
+        "category": {
+            "id": 3,
+            "name": "Alimentation"
+        },
+        "answers": [
+            {
+                "id": 40,
+                "title": "oui",
+                "score": 0.0,
+                "questionId": 14
+            },
+            {
+                "id": 41,
+                "title": "non",
+                "score": 1.0,
+                "questionId": 14
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "title": "Votre logement est-il un appartement ? ",
+        "categoryId": 2,
+        "category": {
+            "id": 2,
+            "name": "Logement"
+        },
+        "answers": [
+            {
+                "id": 42,
+                "title": "oui",
+                "score": 1.0,
+                "questionId": 15
+            },
+            {
+                "id": 43,
+                "title": "non",
+                "score": 0.0,
+                "questionId": 15
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "title": "Quelle est la surface de votre logement ?",
+        "categoryId": 2,
+        "category": {
+            "id": 2,
+            "name": "Logement"
+        },
+        "answers": [
+            {
+                "id": 44,
+                "title": "moins 25m²",
+                "score": 1.0,
+                "questionId": 16
+            },
+            {
+                "id": 45,
+                "title": "50m²",
+                "score": 0.5,
+                "questionId": 16
+            },
+            {
+                "id": 46,
+                "title": "plus de 50m²",
+                "score": 0.0,
+                "questionId": 16
+            }
+        ]
+    },
+    {
+        "id": 17,
+        "title": "Quel est l âge de votre logement ?",
+        "categoryId": 2,
+        "category": {
+            "id": 2,
+            "name": "Logement"
+        },
+        "answers": [
+            {
+                "id": 47,
+                "title": "neuf",
+                "score": 1.0,
+                "questionId": 17
+            },
+            {
+                "id": 48,
+                "title": "recent",
+                "score": 0.5,
+                "questionId": 17
+            },
+            {
+                "id": 49,
+                "title": "années 70",
+                "score": 0.0,
+                "questionId": 17
+            }
+        ]
+    },
+    {
+        "id": 18,
+        "title": "Quel type d énergie utilisez-vous pour le chauffage de votre logement, eau chaude, cuisson, etc. ?",
+        "categoryId": 2,
+        "category": {
+            "id": 2,
+            "name": "Logement"
+        },
+        "answers": [
+            {
+                "id": 50,
+                "title": "pompe à chaleur",
+                "score": 1.0,
+                "questionId": 18
+            },
+            {
+                "id": 51,
+                "title": "electricité",
+                "score": 0.5,
+                "questionId": 18
+            },
+            {
+                "id": 52,
+                "title": "gaz",
+                "score": 0.0,
+                "questionId": 18
+            },
+            {
+                "id": 53,
+                "title": "bois ou granulé",
+                "score": 1.0,
+                "questionId": 18
+            }
+        ]
+    },
+    {
+        "id": 19,
+        "title": "Quel effort faites-vous pour garder vos appareils électroniques le plus longtemps possible ?",
+        "categoryId": 2,
+        "category": {
+            "id": 2,
+            "name": "Logement"
+        },
+        "answers": [
+            {
+                "id": 54,
+                "title": "aucun",
+                "score": 0.0,
+                "questionId": 19
+            },
+            {
+                "id": 55,
+                "title": "peu d'effort",
+                "score": 0.5,
+                "questionId": 19
+            },
+            {
+                "id": 56,
+                "title": "effort moyen",
+                "score": 1.0,
+                "questionId": 19
+            }
+        ]
+    },
+    {
+        "id": 20,
+        "title": "Combien d heures passez-vous par jour sur internet hors bureau ?",
+        "categoryId": 2,
+        "category": {
+            "id": 2,
+            "name": "Logement"
+        },
+        "answers": [
+            {
+                "id": 57,
+                "title": "zero",
+                "score": 1.0,
+                "questionId": 20
+            },
+            {
+                "id": 58,
+                "title": "modérement",
+                "score": 0.5,
+                "questionId": 20
+            },
+            {
+                "id": 59,
+                "title": "je ne decroche jamais",
+                "score": 0.0,
+                "questionId": 20
+            }
+        ]
+    }
+]
