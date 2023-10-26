@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:green_impact/auth/loading_widget.dart';
+import 'package:green_impact/auth/login.dart';
 
 class Authentificator extends StatelessWidget {
   @override
@@ -47,10 +49,8 @@ class Authentificator extends StatelessWidget {
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => Authentificator()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Login()));
                     // Gérer la réponse de l'API ici, par exemple stocker le token dans le stockage local
                   },
                   child: Text(

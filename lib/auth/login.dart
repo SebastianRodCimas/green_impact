@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:green_impact/auth/loading_widget.dart';
 import 'package:green_impact/src/profil.dart';
 
 class Login extends StatelessWidget {
@@ -65,7 +66,7 @@ class Login extends StatelessWidget {
                     // final String email = emailController.text;
                     // await authenticate(email);
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Profil()));
+                        MaterialPageRoute(builder: (context) => LoadingView()));
                     // Gérer la réponse de l'API ici, par exemple stocker le token dans le stockage local
                   },
                   child: Text(

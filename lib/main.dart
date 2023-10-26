@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:green_impact/auth/authentificator.dart';
 import 'package:timezone/data/latest.dart' as tz;
 
 import 'auth/login.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
         useMaterial3: true,
       ),
-      home: Login(),
+      home: Authentificator(),
     );
   }
 }

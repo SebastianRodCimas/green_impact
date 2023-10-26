@@ -1,24 +1,51 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
-class LoadingView extends StatelessWidget {
+import '../src/profil.dart';
+
+class LoadingView extends StatefulWidget {
+  @override
+  _LoadingViewState createState() => _LoadingViewState();
+}
+
+class _LoadingViewState extends State<LoadingView> {
+  @override
+  void initState() {
+    super.initState();
+
+    Future.delayed(Duration(seconds: 2), () {
+      Navigator.of(context).pushReplacement(
+        MaterialPageRoute(
+          builder: (context) => Profil(),
+        ),
+      );
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        SizedBox(
-          height: MediaQuery.of(context).size.height*0.2,
-        ),
-        Container(
-          child: Lottie.asset('assets/loading.json'),
-        ),
-        Text('Loading ...',
-          style: TextStyle(
-            fontSize: 16.0,
-          ),),
-      ],
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Loading Page'),
+      ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.2,
+          ),
+          Container(
+            child: Lottie.asset('assets/loading.json'),
+          ),
+          Text(
+            'Loading ...',
+            style: TextStyle(
+              fontSize: 16.0,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
