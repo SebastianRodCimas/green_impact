@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:green_impact/auth/loading_widget.dart';
+import 'package:green_impact/auth/repository.dart';
 import 'package:green_impact/src/profil.dart';
 
 class Login extends StatelessWidget {
-  // final emailController = TextEditingController();
+  final emailController = TextEditingController();
+
+  final pwdController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -47,13 +50,22 @@ class Login extends StatelessWidget {
                   ),
                 ),
               ),
-              // makeInput(label: "Email", obsureText: true),
               Container(
                 margin: const EdgeInsets.all(10),
                 child: TextField(
-                  // controller: emailController,
+                  controller: emailController,
                   decoration: InputDecoration(
                     hintText: "Email...",
+                    border: OutlineInputBorder(),
+                  ),
+                ),
+              ),
+              Container(
+                margin: const EdgeInsets.all(10),
+                child: TextField(
+                  controller: pwdController,
+                  decoration: InputDecoration(
+                    hintText: "Password...",
                     border: OutlineInputBorder(),
                   ),
                 ),
@@ -63,11 +75,11 @@ class Login extends StatelessWidget {
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () async {
-                    // final String email = emailController.text;
-                    // await authenticate(email);
+                    final String pwd = pwdController.text;
+                    final String email = emailController.text;
+                    await authenticate(email, pwd);
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => LoadingView()));
-                    // Gérer la réponse de l'API ici, par exemple stocker le token dans le stockage local
                   },
                   child: Text(
                     "Login",

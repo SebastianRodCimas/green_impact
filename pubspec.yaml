@@ -37,6 +37,7 @@ dev_dependencies:
   timezone: ^0.7.0
   fl_chart: ^0.64.0
   lottie: ^1.1.0
+  http: ^0.13.3
 
 flutter_native_splash:
   color: "#19541C"

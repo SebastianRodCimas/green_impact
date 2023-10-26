@@ -1,26 +1,19 @@
-/*
 import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 
-var email, token;
-final String url = "http://192.168.77.197:8080/api/products";
-
-List<Products> parseProd(String responseBody) {
-  var list = json.decode(responseBody) as List<dynamic>;
-  var products = list.map((e) => Products.fromJson(e)).toList();
-  return products;
-}
+var email, token, pwd;
 
 void setToken(String body) {
   token = body;
 }
 
-Future<String> authenticate(String email) async {
+Future<String> authenticate(String email, String pwd) async {
   final response = await http.post(
-    Uri.parse('http://192.168.77.197:8080/signup'),
+    Uri.parse('https://localhost:5220/api/Authentications/Authenticate'),
     body: jsonEncode(<String, String>{
-      'userMail': email,
+      'login': email,
+      'password': pwd,
     }),
   );
   if (response.statusCode == 200) {
@@ -30,16 +23,3 @@ Future<String> authenticate(String email) async {
     throw Exception('Failed to authenticate user.');
   }
 }
-
-Future<List<Products>> fetchProducts() async {
-  Map<String, String> header = {"api-key": token};
-  final http.Response response =
-      await http.get(Uri.parse(url), headers: header);
-
-  if (response.statusCode == 200) {
-    return compute(parseProd, response.body);
-  } else {
-    throw Exception(response.statusCode);
-  }
-}
-*/
