@@ -5,9 +5,9 @@ import 'package:green_impact/auth/repository.dart';
 import 'package:green_impact/src/profil.dart';
 
 class Login extends StatelessWidget {
-  final emailController = TextEditingController();
+  //final emailController = TextEditingController();
 
-  final pwdController = TextEditingController();
+  //final pwdController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -17,6 +17,7 @@ class Login extends StatelessWidget {
         elevation: 0,
         backgroundColor: Colors.white,
         systemOverlayStyle: SystemUiOverlayStyle.dark,
+        automaticallyImplyLeading: false,
       ),
       body: SingleChildScrollView(
         child: Container(
@@ -33,13 +34,6 @@ class Login extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 10),
-              Text(
-                "Automatic identity verification which enable you to verify your identity",
-                style: TextStyle(
-                  fontSize: 15,
-                  color: Colors.grey[700],
-                ),
-              ),
               SizedBox(height: 10),
               Container(
                 height: MediaQuery.of(context).size.height / 2,
@@ -53,7 +47,7 @@ class Login extends StatelessWidget {
               Container(
                 margin: const EdgeInsets.all(10),
                 child: TextField(
-                  controller: emailController,
+                  // controller: emailController,
                   decoration: InputDecoration(
                     hintText: "Email...",
                     border: OutlineInputBorder(),
@@ -63,21 +57,21 @@ class Login extends StatelessWidget {
               Container(
                 margin: const EdgeInsets.all(10),
                 child: TextField(
-                  controller: pwdController,
-                  decoration: InputDecoration(
-                    hintText: "Password...",
-                    border: OutlineInputBorder(),
-                  ),
-                ),
+                    // controller: pwdController,
+                    decoration: InputDecoration(
+                      hintText: "Password...",
+                      border: OutlineInputBorder(),
+                    ),
+                    obscureText: true),
               ),
               Container(
                 height: 40,
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () async {
-                    final String pwd = pwdController.text;
-                    final String email = emailController.text;
-                    await authenticate(email, pwd);
+                    // final String pwd = pwdController.text;
+                    //final String email = emailController.text;
+                    //await authenticate(email, pwd);
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => LoadingView()));
                   },

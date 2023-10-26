@@ -7,33 +7,24 @@ class NotificationService {
 
   Future<void> init() async {
     const AndroidInitializationSettings androidInitializationSettings =
-        AndroidInitializationSettings(
-            'app_icon'); // Remplacez 'app_icon' par le nom de votre icône d'application
-    const IOSInitializationSettings iosInitializationSettings =
-        IOSInitializationSettings();
+        AndroidInitializationSettings('app_icon');
 
     final InitializationSettings initializationSettings =
-        InitializationSettings(
-            android: androidInitializationSettings,
-            iOS: iosInitializationSettings);
+        InitializationSettings(android: androidInitializationSettings);
 
     await flutterLocalNotificationsPlugin.initialize(initializationSettings);
   }
 
-  Future<void> showDailyNotification() async {
-    final tz.TZDateTime now = tz.TZDateTime.now(tz.local);
-    final tz.TZDateTime scheduledDate =
-        tz.TZDateTime(tz.local, now.year, now.month, now.day, 8, 0);
-
-    if (scheduledDate.isBefore(now)) {
-      scheduledDate.add(const Duration(days: 1));
-    }
+  Future<void> showRepeatingNotification() async {
+    tz.TZDateTime scheduledDate = tz.TZDateTime.now(tz.local).add(
+      const Duration(days: 1),
+    );
 
     const AndroidNotificationDetails androidPlatformChannelSpecifics =
         AndroidNotificationDetails(
-      '1', // Remplacez par un identifiant unique
-      'Channel notification', // Remplacez par un nom de canal
-      'Nouvelle astuces de la journée !', // Remplacez par une description du canal
+      '1',
+      'Channel notification',
+      'Nouvelles astuces  1 fois par jour !',
       importance: Importance.high,
       priority: Priority.high,
     );
@@ -47,14 +38,14 @@ class NotificationService {
 
     await flutterLocalNotificationsPlugin.zonedSchedule(
       1,
-      'Nouvelle astuces de la journée !',
-      'Faites des gestes eco-responsables !',
+      'Nouvelles astuces  1 fois par jour !',
+      'Faites des gestes éco-responsables !',
       scheduledDate,
       platformChannelSpecifics,
       androidAllowWhileIdle: true,
       uiLocalNotificationDateInterpretation:
           UILocalNotificationDateInterpretation.absoluteTime,
-      payload: 'data', // Données supplémentaires à inclure avec la notification
+      payload: 'data',
       matchDateTimeComponents: DateTimeComponents.time,
     );
   }

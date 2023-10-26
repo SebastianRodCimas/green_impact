@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:green_impact/src/notif.dart';
 import 'package:green_impact/src/questionnaire.dart';
+import 'package:green_impact/src/test.dart';
 import 'package:image_picker/image_picker.dart';
 
 import 'bilan.dart';
@@ -54,11 +56,9 @@ class _ProfilState extends State<Profil> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            // Avatar de l'utilisateur et nom d'utilisateur
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                // Avatar de l'utilisateur
                 _avatarImagePath != null
                     ? GestureDetector(
                         onTap: _pickImage,
@@ -83,13 +83,19 @@ class _ProfilState extends State<Profil> {
                           color: Colors.green.shade800,
                         ),
                       ),
-                SizedBox(width: 20), // Espacement entre l'avatar et le nom
-                // Nom d'utilisateur
-                Text(
-                  'Nom d\'utilisateur',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 20,
+                SizedBox(width: 20),
+                InkWell(
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => Notif()),
+                    );
+                  },
+                  child: Text(
+                    'Rodrigue  Cimas ',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                    ),
                   ),
                 ),
               ],
@@ -323,7 +329,7 @@ class _ProfilState extends State<Profil> {
                     ));
                   },
                   child: Icon(
-                    Icons.data_exploration_rounded,
+                    Icons.face_retouching_natural,
                     size: 35,
                     color: Colors.white,
                   ),
@@ -334,11 +340,11 @@ class _ProfilState extends State<Profil> {
                 icon: GestureDetector(
                   onTap: () {
                     Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => Questionnaire(),
+                      builder: (context) => Test(),
                     ));
                   },
                   child: Icon(
-                    Icons.data_exploration_rounded,
+                    Icons.question_mark_sharp,
                     size: 35,
                     color: Colors.white,
                   ),

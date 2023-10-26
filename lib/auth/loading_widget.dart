@@ -36,7 +36,7 @@ class _LoadingViewState extends State<LoadingView> {
             child: Lottie.asset('assets/loading.json'),
           ),
           Text(
-            'Loading ...',
+            'Chargement ...',
             style: TextStyle(
               fontSize: 16.0,
             ),
